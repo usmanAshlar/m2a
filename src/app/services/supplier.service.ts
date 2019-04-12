@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/toPromise';
-import { UserModel } from '../models/User.model';
+import { UserModel } from '../models/user.model';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
 import { AuthService } from '../authentication/core/auth.service';
 

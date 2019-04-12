@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { OrderListModel } from '../models/order-List.model';
+import { OrderListModel } from '../models/order-list.model';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
 import { AuthService } from '../authentication/core/auth.service';
 
