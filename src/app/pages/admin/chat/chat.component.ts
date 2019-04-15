@@ -71,7 +71,7 @@ export class adminChatComponent implements OnInit {
         }
         count++
         console.log(supplierOrderList);
-        supplierOrderList.sort((a, b) => { return (+b.lastAddedMsgDate - +a.lastAddedMsgDate) });
+        supplierOrderList.sort((a, b) => { return ((+b.lastAddedMsgDate? +b.lastAddedMsgDate :0 ) - (+a.lastAddedMsgDate? +a.lastAddedMsgDate :0)) });
         console.log(supplierOrderList);
         supplierOrderList.forEach(order => {
           if (this.ownEmail == order.supplierEmail) {
@@ -114,10 +114,10 @@ export class adminChatComponent implements OnInit {
       )
       .subscribe(chats => {
         console.log(chats);
-        chats.sort((a, b) => { return (+b.lastAddedMsgDate - +a.lastAddedMsgDate) });
+        chats.sort((a, b) => { return ((+b.lastAddedMsgDate? +b.lastAddedMsgDate :0 ) - (+a.lastAddedMsgDate? +a.lastAddedMsgDate :0)) });
         console.log(chats);
         this.chatAdmin = chats;
-        console.log(this.chatAdmin);
+        console.log(this.chatAdmin); 
 
       });
 
@@ -134,7 +134,7 @@ export class adminChatComponent implements OnInit {
       )
       .subscribe(chats => {
         console.log(chats);
-        chats.sort((a, b) => { return (+b.lastAddedMsgDate - +a.lastAddedMsgDate) });
+        chats.sort((a, b) => { return ((+b.lastAddedMsgDate? +b.lastAddedMsgDate :0 ) - (+a.lastAddedMsgDate? +a.lastAddedMsgDate :0)) });
         console.log(chats);
         this.chatSupplier = chats;
         console.log(this.chatSupplier);
