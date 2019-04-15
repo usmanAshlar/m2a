@@ -9,5 +9,7 @@ export const environment = {
     messagingSenderId: "301109751242"
   },
   functionsURL: 'https://us-central1-m2bshop-d76be.cloudfunctions.net',
+  paypalSandboxKey: 'AQT6Lob6ZwNMSCkI8dE6ZjiC6IyKW77SdjkxZ8YWR4tN3pjbn-SfvTDDxkquTG7mRDNDlABPQZCFEUK9',
+  paypalProductionKey:'<insert production client id>'
   //  functionsURL: 'http://localhost:5000/m2bshop-d76be/us-central1',
 };

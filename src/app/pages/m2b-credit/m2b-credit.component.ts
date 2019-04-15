@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
 import { Router, ActivatedRoute } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 
 
@@ -87,8 +88,8 @@ export class M2bCreditComponent implements OnInit, AfterViewChecked {
 
 
       client: {
-        sandbox: 'AQT6Lob6ZwNMSCkI8dE6ZjiC6IyKW77SdjkxZ8YWR4tN3pjbn-SfvTDDxkquTG7mRDNDlABPQZCFEUK9',
-        production: '<insert production client id>'
+        sandbox: environment.paypalSandboxKey,
+        production: environment.paypalProductionKey
       },
 
       payment: (data, actions) => {
